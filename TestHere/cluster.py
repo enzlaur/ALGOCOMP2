@@ -24,11 +24,13 @@ def usewith():
             if row[0] !=  "\ufeffCLOSEST_DEF":
                 clust1.append(row)
     points = np.array(clust1)
-    kmeans = KMeans(n_clusters=3, random_state=np.random).fit(points)
+    kmeans = KMeans(n_clusters=4, random_state=np.random).fit(points)
     for i in range(len(points)):
         point = points[i]
         label = kmeans.labels_[i]
         clusterpoints.append([float(point[0]), float(point[1]), label])
+    for centers in kmeans.cluster_centers_:
+        clusterpoints.append([float(centers[0]), float(centers[1]), 99])
     # print(kmeans.labels_)
     # print(kmeans.cluster_centers_)
     return clusterpoints
@@ -38,7 +40,10 @@ def colorchoices(x):
     return {
         0: 'red',
         1: 'blue',
-        2: 'orange'
+        2: 'orange',
+        3: 'pink',
+        4: 'cyan',
+        99: 'green'
     }[x]
 
 
