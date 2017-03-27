@@ -42,12 +42,29 @@ from sklearn.cluster._k_means_elkan import k_means_elkan
 # Initialization heuristic
 
 freq = 0
+lloyditer = 0
+
 
 def printfrequency():
-    print("Freq: " + str(freq))
+    print("Freq from kmeans: " + str(freq))
+
+
+def addfreq():
+    global freq
+    freq+=1
+
+
+def getfreq():
+    global freq
+    return freq
+
+
+def getlloyditer():
+    global lloyditer
+    return lloyditer
 
 def _k_init(X, n_clusters, x_squared_norms, random_state, n_local_trials=None):
-    print("_k_init has been called")
+    # print("_k_init has been called")
     # freq counting
     global freq
     freq += 1
@@ -161,7 +178,7 @@ def _k_init(X, n_clusters, x_squared_norms, random_state, n_local_trials=None):
 
 def _validate_center_shape(X, n_centers, centers):
     """Check if centers is compatible with X and n_centers"""
-    print("_validate_center_shape has been called")
+    # print("_validate_center_shape has been called")
     # freq counting
     global freq
     freq += 1
@@ -179,7 +196,7 @@ def _validate_center_shape(X, n_centers, centers):
 
 def _tolerance(X, tol):
     """Return a tolerance which is independent of the dataset"""
-    print("_tolerance has been called")
+    # print("_tolerance has been called")
     # freq counting
     global freq
     freq += 1
@@ -194,8 +211,8 @@ def _tolerance(X, tol):
 def k_means(X, n_clusters, init='k-means++', precompute_distances='auto',
             n_init=10, max_iter=300, verbose=False,
             tol=1e-4, random_state=None, copy_x=True, n_jobs=1,
-            algorithm="auto", return_n_iter=False):
-    print("k_means has been called")
+            algorithm="auto", return_n_iter=True):
+    # print("k_means has been called")
     # freq counting
     global freq
     freq += 1
@@ -302,6 +319,9 @@ def k_means(X, n_clusters, init='k-means++', precompute_distances='auto',
         Returned only if `return_n_iter` is set to True.
 
     """
+    global lloyditer
+    print("k_means has been called")
+    addfreq()
     if n_init <= 0:
         raise ValueError("Invalid number of initializations."
                          " n_init=%d must be bigger than zero." % n_init)
@@ -377,6 +397,7 @@ def k_means(X, n_clusters, init='k-means++', precompute_distances='auto',
                 best_centers = centers.copy()
                 best_inertia = inertia
                 best_n_iter = n_iter_
+                lloyditer = best_n_iter
     else:
         # parallelisation of k-means runs
         seeds = random_state.randint(np.iinfo(np.int32).max, size=n_init)
@@ -395,6 +416,7 @@ def k_means(X, n_clusters, init='k-means++', precompute_distances='auto',
         best_inertia = inertia[best]
         best_centers = centers[best]
         best_n_iter = n_iters[best]
+        lloyditer = best_n_iter
 
     if not sp.issparse(X):
         if not copy_x:
@@ -402,18 +424,17 @@ def k_means(X, n_clusters, init='k-means++', precompute_distances='auto',
         best_centers += X_mean
 
     if return_n_iter:
+        lloyditer = best_n_iter
         return best_centers, best_labels, best_inertia, best_n_iter
     else:
         return best_centers, best_labels, best_inertia
-    freq+=6
-    print("Freq " + freq)
 
 
 def _kmeans_single_elkan(X, n_clusters, max_iter=300, init='k-means++',
                          verbose=False, x_squared_norms=None,
                          random_state=None, tol=1e-4,
                          precompute_distances=True):
-    print("_kmeans_single_elkan has been called")
+    # print("_kmeans_single_elkan has been called")
     # freq counting
     global freq
     freq += 1
@@ -503,7 +524,7 @@ def _kmeans_single_lloyd(X, n_clusters, max_iter=300, init='k-means++',
     n_iter : int
         Number of iterations run.
     """
-    print("_kmeans_single_lloyd has been called")
+    # print("_kmeans_single_lloyd has been called")
 
     # freq counting 
     global freq
@@ -522,7 +543,7 @@ def _kmeans_single_lloyd(X, n_clusters, max_iter=300, init='k-means++',
     # Allocate memory to store the distances for each sample to its
     # closer center for reallocation in case of ties
     distances = np.zeros(shape=(X.shape[0],), dtype=X.dtype)
-
+    # laurenz
     # iterations
     for i in range(max_iter):
         freq += 1
@@ -563,7 +584,6 @@ def _kmeans_single_lloyd(X, n_clusters, max_iter=300, init='k-means++',
             _labels_inertia(X, x_squared_norms, best_centers,
                             precompute_distances=precompute_distances,
                             distances=distances)
-
     return best_labels, best_inertia, best_centers, i + 1
 
 
@@ -595,7 +615,7 @@ def _labels_inertia_precompute_dense(X, x_squared_norms, centers, distances):
         Sum of distances of samples to their closest cluster center.
 
     """
-    print("_labels_inertia_precompute_dense has been called")
+    # print("_labels_inertia_precompute_dense has been called")
 
     n_samples = X.shape[0]
 
@@ -647,7 +667,7 @@ def _labels_inertia(X, x_squared_norms, centers,
     inertia : float
         Sum of distances of samples to their closest cluster center.
     """
-    print("_labels_inertia has been called")
+    # print("_labels_inertia has been called")
     # freq counting 
     global freq
     freq += 1
@@ -705,7 +725,7 @@ def _init_centroids(X, k, init, random_state=None, x_squared_norms=None,
     -------
     centers: array, shape(k, n_features)
     """
-    print("_init_centroids has been called")
+    # print("_init_centroids has been called")
     # freq counting
     global freq
     freq += 1
@@ -890,7 +910,7 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
                  max_iter=300, tol=1e-4, precompute_distances='auto',
                  verbose=0, random_state=None, copy_x=True,
                  n_jobs=1, algorithm='auto'):
-        print("class KMeans has been called oye")
+        # print("class KMeans has been called oye")
         # freq counting
         global freq
         freq += 1
@@ -908,10 +928,9 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         self.algorithm = algorithm
 
     def _check_fit_data(self, X):
-        print("_check_fit_data called")
+        # print("_check_fit_data called")
         # freq counting
-        global freq
-        freq += 1
+        addfreq()
         # /freq counting
         """Verify that the number of samples given is larger than k"""
         X = check_array(X, accept_sparse='csr', dtype=[np.float64, np.float32])
@@ -945,7 +964,7 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         X : array-like or sparse matrix, shape=(n_samples, n_features)
             Training instances to cluster.
         """
-        print("KMeans.fit called")
+        # print("KMeans.fit called")
         # freq counting
         global freq
         freq += 1
@@ -961,6 +980,7 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
                 tol=self.tol, random_state=random_state, copy_x=self.copy_x,
                 n_jobs=self.n_jobs, algorithm=self.algorithm,
                 return_n_iter=True)
+        # print("self.n_iter " + str(self.n_iter_))
         return self
 
     def fit_predict(self, X, y=None):
@@ -1080,11 +1100,6 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         X = self._check_test_data(X)
         x_squared_norms = row_norms(X, squared=True)
         return -_labels_inertia(X, x_squared_norms, self.cluster_centers_)[1]
-
-
-    def printfrequency():
-        return freq
-
 
 def _mini_batch_step(X, x_squared_norms, centers, counts,
                      old_center_buffer, compute_squared_diff,
@@ -1429,7 +1444,7 @@ class MiniBatchKMeans(KMeans):
         X : array-like or sparse matrix, shape=(n_samples, n_features)
             Training instances to cluster.
         """
-        print("MiniBatchKMeans.fit has been called")
+        # print("MiniBatchKMeans.fit has been called")
         random_state = check_random_state(self.random_state)
         X = check_array(X, accept_sparse="csr", order='C',
                         dtype=[np.float64, np.float32])
@@ -1576,7 +1591,7 @@ class MiniBatchKMeans(KMeans):
         inertia : float
             Sum of squared distances of points to nearest cluster.
         """
-        print("_labels_inertia_minibatch has been called")
+        # print("_labels_inertia_minibatch has been called")
         if self.verbose:
             print('Computing label assignment and total inertia')
         x_squared_norms = row_norms(X, squared=True)
@@ -1594,7 +1609,7 @@ class MiniBatchKMeans(KMeans):
         X : array-like, shape = [n_samples, n_features]
             Coordinates of the data points to cluster.
         """
-        print("partial_fit has been called")
+        # print("partial_fit has been called")
         X = check_array(X, accept_sparse="csr")
         n_samples, n_features = X.shape
         if hasattr(self.init, '__array__'):
@@ -1656,7 +1671,7 @@ class MiniBatchKMeans(KMeans):
         labels : array, shape [n_samples,]
             Index of the cluster each sample belongs to.
         """
-        print("predict has been called")
+        # print("predict has been called")
         check_is_fitted(self, 'cluster_centers_')
 
         X = self._check_test_data(X)
