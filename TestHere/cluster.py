@@ -24,7 +24,7 @@ def usewith():
             if row[0] !=  "\ufeffCLOSEST_DEF":
                 clust1.append(row)
     points = np.array(clust1)
-    kmeans = KMeans(n_clusters=4, random_state=np.random).fit(points)
+    kmeans = KMeans(n_clusters=4, random_state=np.random, algorithm="elkan").fit(points)
     for i in range(len(points)):
         point = points[i]
         label = kmeans.labels_[i]

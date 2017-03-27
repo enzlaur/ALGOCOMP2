@@ -394,6 +394,7 @@ def _kmeans_single_elkan(X, n_clusters, max_iter=300, init='k-means++',
                          verbose=False, x_squared_norms=None,
                          random_state=None, tol=1e-4,
                          precompute_distances=True):
+    print("_kmeans_single_elkan has been called")
     if sp.issparse(X):
         raise ValueError("algorithm='elkan' not supported for sparse input X")
     X = check_array(X, order="C")
@@ -479,6 +480,7 @@ def _kmeans_single_lloyd(X, n_clusters, max_iter=300, init='k-means++',
     n_iter : int
         Number of iterations run.
     """
+    print("_kmeans_single_lloyd has been called")
     random_state = check_random_state(random_state)
 
     best_labels, best_inertia, best_centers = None, None, None
@@ -563,6 +565,8 @@ def _labels_inertia_precompute_dense(X, x_squared_norms, centers, distances):
         Sum of distances of samples to their closest cluster center.
 
     """
+    print("_labels_inertia_precompute_dense has been called")
+
     n_samples = X.shape[0]
 
     # Breakup nearest neighbor distance computation into batches to prevent
@@ -613,6 +617,7 @@ def _labels_inertia(X, x_squared_norms, centers,
     inertia : float
         Sum of distances of samples to their closest cluster center.
     """
+    print("_labels_inertia has been called")
     n_samples = X.shape[0]
     # set the default value of centers to -1 to be able to detect any anomaly
     # easily
@@ -861,6 +866,7 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         self.algorithm = algorithm
 
     def _check_fit_data(self, X):
+        print("_check_fit_data called")
         """Verify that the number of samples given is larger than k"""
         X = check_array(X, accept_sparse='csr', dtype=[np.float64, np.float32])
         if X.shape[0] < self.n_clusters:
@@ -869,6 +875,7 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         return X
 
     def _check_test_data(self, X):
+        print("_check_test_data called")
         X = check_array(X, accept_sparse='csr', dtype=FLOAT_DTYPES)
         n_samples, n_features = X.shape
         expected_n_features = self.cluster_centers_.shape[1]
@@ -880,6 +887,7 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         return X
 
     def fit(self, X, y=None):
+        print("fit called")
         global freq
         freq+=1
         """Compute k-means clustering.
@@ -904,6 +912,7 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         return self
 
     def fit_predict(self, X, y=None):
+        print("fit_predict called")
         """Compute cluster centers and predict cluster index for each sample.
 
         Convenience method; equivalent to calling fit(X) followed by
@@ -912,6 +921,7 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         return self.fit(X).labels_
 
     def fit_transform(self, X, y=None):
+        print("fit_transform called")
         """Compute clustering and transform X to cluster-distance space.
 
         Equivalent to fit(X).transform(X), but more efficiently implemented.
@@ -924,6 +934,7 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         return self.fit(X)._transform(X)
 
     def transform(self, X, y=None):
+        print("transform called")
         """Transform X to a cluster-distance space.
 
         In the new space, each dimension is the distance to the cluster
@@ -946,10 +957,12 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         return self._transform(X)
 
     def _transform(self, X):
+        print("_transform called")
         """guts of transform method; no input validation"""
         return euclidean_distances(X, self.cluster_centers_)
 
     def predict(self, X):
+        print("predict called")
         """Predict the closest cluster each sample in X belongs to.
 
         In the vector quantization literature, `cluster_centers_` is called
@@ -973,6 +986,7 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         return _labels_inertia(X, x_squared_norms, self.cluster_centers_)[0]
 
     def score(self, X, y=None):
+        print("score called")
         """Opposite of the value of X on the K-means objective.
 
         Parameters
@@ -1055,6 +1069,7 @@ def _mini_batch_step(X, x_squared_norms, centers, counts,
 
     """
     # Perform label assignment to nearest centers
+    print("_mini_batch_step called")
     nearest_center, inertia = _labels_inertia(X, x_squared_norms, centers,
                                               distances=distances)
 
@@ -1134,6 +1149,8 @@ def _mini_batch_convergence(model, iteration_idx, n_iter, tol,
     """Helper function to encapsulate the early stopping logic"""
     # Normalize inertia to be able to compare values when
     # batch_size changes
+    print("_mini_batch_convergence called")
+
     batch_inertia /= model.batch_size
     centers_squared_diff /= model.batch_size
 
@@ -1307,7 +1324,7 @@ class MiniBatchKMeans(KMeans):
                  batch_size=100, verbose=0, compute_labels=True,
                  random_state=None, tol=0.0, max_no_improvement=10,
                  init_size=None, n_init=3, reassignment_ratio=0.01):
-
+        print("Constructor for MiniBatchKMeans called")
         super(MiniBatchKMeans, self).__init__(
             n_clusters=n_clusters, init=init, max_iter=max_iter,
             verbose=verbose, random_state=random_state, tol=tol, n_init=n_init)
@@ -1328,6 +1345,7 @@ class MiniBatchKMeans(KMeans):
         X : array-like or sparse matrix, shape=(n_samples, n_features)
             Training instances to cluster.
         """
+        print("MiniBatchKMeans.fit has been called")
         random_state = check_random_state(self.random_state)
         X = check_array(X, accept_sparse="csr", order='C',
                         dtype=[np.float64, np.float32])
@@ -1474,6 +1492,7 @@ class MiniBatchKMeans(KMeans):
         inertia : float
             Sum of squared distances of points to nearest cluster.
         """
+        print("_labels_inertia_minibatch has been called")
         if self.verbose:
             print('Computing label assignment and total inertia')
         x_squared_norms = row_norms(X, squared=True)
@@ -1491,7 +1510,7 @@ class MiniBatchKMeans(KMeans):
         X : array-like, shape = [n_samples, n_features]
             Coordinates of the data points to cluster.
         """
-
+        print("partial_fit has been called")
         X = check_array(X, accept_sparse="csr")
         n_samples, n_features = X.shape
         if hasattr(self.init, '__array__'):
@@ -1553,6 +1572,7 @@ class MiniBatchKMeans(KMeans):
         labels : array, shape [n_samples,]
             Index of the cluster each sample belongs to.
         """
+        print("predict has been called")
         check_is_fitted(self, 'cluster_centers_')
 
         X = self._check_test_data(X)
