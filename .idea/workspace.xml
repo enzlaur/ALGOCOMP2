@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="739d7bd0-edc4-48ee-bea2-ffe699a0a346" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestHere/shot-def-dist-10k.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestHere/shot-def-dist-5k.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestHere/kmeans.py" afterPath="$PROJECT_DIR$/TestHere/kmeans.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestHere/testMe.ipynb" afterPath="$PROJECT_DIR$/TestHere/testMe.ipynb" />
     </list>
     <ignored path="ALGOCOMP2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,8 +88,8 @@
           <file leaf-file-name="cluster.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/TestHere/cluster.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.30115426">
-                  <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.037775446">
+                  <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
                   <folding>
                     <element signature="e#17#27#0" expanded="true" />
                   </folding>
@@ -502,7 +502,13 @@
       <option name="project" value="LOCAL" />
       <updated>1490642511568</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Updated iPython Notebook">
+      <created>1490642758573</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1490642758573</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -516,7 +522,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.5234541" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14818764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="836" y="4" width="376" height="1033" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14818764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="836" y="4" width="376" height="1033" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -552,7 +558,8 @@
     <MESSAGE value="Copy paste kmeans.py to your local system sklearn kmeans.py file.&#10;ALWAYS EDIT SYSTEM PACKAGES PER SESSION ONLY" />
     <MESSAGE value="added counters in validation and spectral" />
     <MESSAGE value="Added expected BigO/FreqCount when running Full/Lloyd&#10;Missing expected O for Elkan" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added expected BigO/FreqCount when running Full/Lloyd&#10;Missing expected O for Elkan" />
+    <MESSAGE value="Updated iPython Notebook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated iPython Notebook" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -975,8 +982,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TestHere/cluster.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30115426">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.037775446">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding>
             <element signature="e#17#27#0" expanded="true" />
           </folding>
