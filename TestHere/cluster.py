@@ -9,28 +9,48 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 
 # from sklearn.cluster.k_means_ import freq as freqme
-from sklearn.cluster.k_means_ import printfrequency as prntfreq
+from sklearn.cluster.k_means_ import printfrequency as kmeanfreq
+from sklearn.cluster.k_means_ import getfreq as kmeangetfreq
 from sklearn.utils.validation import printfreq as validfreq
+from sklearn.utils.validation import getfreq as validgetfreq
+from sklearn.cluster.spectral import printfreq as spectralfreq
+from sklearn.cluster.k_means_ import getlloyditer as lloyditer
+
 #practice of reading files
 def read_me():
     sampleFile = open('smalldata.csv', 'rb')
     reader = csv.reader(sampleFile)
 
 
-def usewith():
+def usewith(nclusters, algotype):
     clust1 = []
     clusterpoints = []
+    # acquire data from csv
     with open('smalldata.csv') as smalldata:
         newReader = csv.reader(smalldata)
         for row in newReader:
             if row[0] !=  "\ufeffCLOSEST_DEF":
                 clust1.append(row)
+    # set the points
     points = np.array(clust1)
-    kmeans = KMeans(n_clusters=4, random_state=np.random, algorithm="elkan")
+    # start kmeans processing
+    kmeans = KMeans(n_clusters=nclusters, random_state=np.random, algorithm=algotype)
     kmeans.fit(points)
-    # print("Frequency " + str(freqme))
-    prntfreq()
+    # print the freq count per class (kmeans, validations, etc)
+    kmeanfreq()
     validfreq()
+    spectralfreq()
+    totalfreq = kmeangetfreq() + validgetfreq()
+    # print total freq
+    print("Total freq count: " + str(totalfreq))
+    # print expected range of freq count
+    if algotype == "full":
+        print("Expected BigO/FreqCount for Lloyd/full")
+        print("O(knt) = " + str(nclusters) + "*" + str(len(points)) +
+              "*" + str(lloyditer()) + " = " + str(nclusters*len(points)*lloyditer()))
+    else:
+        print("Expected BigO for Elkan")
+        print("From O() = ")
     for i in range(len(points)):
         point = points[i]
         label = kmeans.labels_[i]
@@ -50,12 +70,17 @@ def colorchoices(x):
         2: 'orange',
         3: 'pink',
         4: 'cyan',
+        5: 'teal',
         99: 'green'
     }[x]
 
 
-def createscatter():
-    clusterpoints = usewith()
+def startclustering():
+    print("Enter the number of clusters (1-5)")
+    num = input()
+    print("Enter full/elkan")
+    algotype = input()
+    clusterpoints = usewith(int(num), str(algotype))
     fig, ax = plt.subplots()
     print("len: ", len(clusterpoints))
     for i in range(len(clusterpoints)):
@@ -83,4 +108,4 @@ def testmatplot():
 
 # Run your crap below
 # createscatter()
-createscatter()
+startclustering()
