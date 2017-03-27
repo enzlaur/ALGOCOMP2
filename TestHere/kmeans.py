@@ -37,6 +37,8 @@ from sklearn.externals.six import string_types
 from sklearn.cluster import _k_means
 from sklearn.cluster._k_means_elkan import k_means_elkan
 
+
+
 ###############################################################################
 # Initialization heuristic
 
@@ -282,11 +284,11 @@ def k_means(X, n_clusters, init='k-means++', precompute_distances='auto',
         raise ValueError("Invalid number of initializations."
                          " n_init=%d must be bigger than zero." % n_init)
     random_state = check_random_state(random_state)
-
+    freq+=1
     if max_iter <= 0:
         raise ValueError('Number of iterations should be a positive number,'
                          ' got %d instead' % max_iter)
-
+    freq+=1
     best_inertia = np.infty
     X = as_float_array(X, copy=copy_x)
     tol = _tolerance(X, tol)
@@ -304,14 +306,14 @@ def k_means(X, n_clusters, init='k-means++', precompute_distances='auto',
         raise ValueError("precompute_distances should be 'auto' or True/False"
                          ", but a value of %r was passed" %
                          precompute_distances)
-
+    freq+=1
     # subtract of mean of x for more accurate distance computations
     if not sp.issparse(X) or hasattr(init, '__array__'):
         X_mean = X.mean(axis=0)
     if not sp.issparse(X):
         # The copy was already done above
         X -= X_mean
-
+    freq+=2
     if hasattr(init, '__array__'):
         init = check_array(init, dtype=X.dtype.type, copy=True)
         _validate_center_shape(X, n_clusters, init)
@@ -323,7 +325,7 @@ def k_means(X, n_clusters, init='k-means++', precompute_distances='auto',
                 'performing only one init in k-means instead of n_init=%d'
                 % n_init, RuntimeWarning, stacklevel=2)
             n_init = 1
-
+    freq+=2
     # precompute squared norms of data points
     x_squared_norms = row_norms(X, squared=True)
 
@@ -384,6 +386,8 @@ def k_means(X, n_clusters, init='k-means++', precompute_distances='auto',
         return best_centers, best_labels, best_inertia, best_n_iter
     else:
         return best_centers, best_labels, best_inertia
+    freq+=6
+    print("Freq " + freq)
 
 
 def _kmeans_single_elkan(X, n_clusters, max_iter=300, init='k-means++',
@@ -876,6 +880,8 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         return X
 
     def fit(self, X, y=None):
+        global freq
+        freq+=1
         """Compute k-means clustering.
 
         Parameters
@@ -1313,6 +1319,8 @@ class MiniBatchKMeans(KMeans):
         self.reassignment_ratio = reassignment_ratio
 
     def fit(self, X, y=None):
+        global freq
+        freq+=1
         """Compute the centroids on X by chunking it into mini-batches.
 
         Parameters
@@ -1327,7 +1335,7 @@ class MiniBatchKMeans(KMeans):
         if n_samples < self.n_clusters:
             raise ValueError("Number of samples smaller than number "
                              "of clusters.")
-
+        freq+=1
         n_init = self.n_init
         if hasattr(self.init, '__array__'):
             self.init = np.ascontiguousarray(self.init, dtype=X.dtype)
@@ -1338,7 +1346,7 @@ class MiniBatchKMeans(KMeans):
                     'n_init=%d'
                     % self.n_init, RuntimeWarning, stacklevel=2)
                 n_init = 1
-
+        freq+=1
         x_squared_norms = row_norms(X, squared=True)
 
         if self.tol > 0.0:
@@ -1353,7 +1361,7 @@ class MiniBatchKMeans(KMeans):
             # no need for the center buffer if tol-based early stopping is
             # disabled
             old_center_buffer = np.zeros(0, dtype=X.dtype)
-
+        freq+=1
         distances = np.zeros(self.batch_size, dtype=X.dtype)
         n_batches = int(np.ceil(float(n_samples) / self.batch_size))
         n_iter = int(self.max_iter * n_batches)
@@ -1364,7 +1372,6 @@ class MiniBatchKMeans(KMeans):
         if init_size > n_samples:
             init_size = n_samples
         self.init_size_ = init_size
-
         validation_indices = random_state.randint(0, n_samples, init_size)
         X_valid = X[validation_indices]
         x_squared_norms_valid = x_squared_norms[validation_indices]
@@ -1372,6 +1379,7 @@ class MiniBatchKMeans(KMeans):
         # perform several inits with random sub-sets
         best_inertia = None
         for init_idx in range(n_init):
+            freq+=1
             if self.verbose:
                 print("Init %d/%d with method: %s"
                       % (init_idx + 1, n_init, self.init))
@@ -1412,6 +1420,7 @@ class MiniBatchKMeans(KMeans):
         # Perform the iterative optimization until the final convergence
         # criterion
         for iteration_idx in range(n_iter):
+            freq+=1
             # Sample a minibatch from the full dataset
             minibatch_indices = random_state.randint(
                 0, n_samples, self.batch_size)
