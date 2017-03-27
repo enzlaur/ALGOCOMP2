@@ -37,12 +37,16 @@ from sklearn.externals.six import string_types
 from sklearn.cluster import _k_means
 from sklearn.cluster._k_means_elkan import k_means_elkan
 
-
 ###############################################################################
 # Initialization heuristic
 
+freq = 0
 
 def _k_init(X, n_clusters, x_squared_norms, random_state, n_local_trials=None):
+    print("woooo")
+    global freq
+    freq+=1
+    print(freq)
     """Init n_clusters seeds according to k-means++
 
     Parameters
@@ -169,6 +173,9 @@ def k_means(X, n_clusters, init='k-means++', precompute_distances='auto',
             n_init=10, max_iter=300, verbose=False,
             tol=1e-4, random_state=None, copy_x=True, n_jobs=1,
             algorithm="auto", return_n_iter=False):
+    print("hellooooo")
+    global freq
+    freq+=1
     """K-means clustering algorithm.
 
     Read more in the :ref:`User Guide <k_means>`.
@@ -836,7 +843,7 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
                  max_iter=300, tol=1e-4, precompute_distances='auto',
                  verbose=0, random_state=None, copy_x=True,
                  n_jobs=1, algorithm='auto'):
-
+        print("KMeans has been called oye")
         self.n_clusters = n_clusters
         self.init = init
         self.max_iter = max_iter
@@ -876,6 +883,7 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         X : array-like or sparse matrix, shape=(n_samples, n_features)
             Training instances to cluster.
         """
+        print("Fit has been called")
         random_state = check_random_state(self.random_state)
         X = self._check_fit_data(X)
 
