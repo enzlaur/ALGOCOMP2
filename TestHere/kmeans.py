@@ -38,17 +38,20 @@ from sklearn.cluster import _k_means
 from sklearn.cluster._k_means_elkan import k_means_elkan
 
 
-
 ###############################################################################
 # Initialization heuristic
 
 freq = 0
 
+def printfrequency():
+    print("Freq: " + str(freq))
+
 def _k_init(X, n_clusters, x_squared_norms, random_state, n_local_trials=None):
-    print("woooo")
+    print("_k_init has been called")
+    # freq counting
     global freq
-    freq+=1
-    print(freq)
+    freq += 1
+    # /freq counting
     """Init n_clusters seeds according to k-means++
 
     Parameters
@@ -82,6 +85,7 @@ def _k_init(X, n_clusters, x_squared_norms, random_state, n_local_trials=None):
     Version ported from http://www.stanford.edu/~darthur/kMeansppTest.zip,
     which is the implementation used in the aforementioned paper.
     """
+
     n_samples, n_features = X.shape
 
     centers = np.empty((n_clusters, n_features), dtype=X.dtype)
@@ -107,9 +111,12 @@ def _k_init(X, n_clusters, x_squared_norms, random_state, n_local_trials=None):
         centers[0, np.newaxis], X, Y_norm_squared=x_squared_norms,
         squared=True)
     current_pot = closest_dist_sq.sum()
-
     # Pick the remaining n_clusters-1 points
     for c in range(1, n_clusters):
+        # freq counting
+
+        freq += 1
+        # /freq counting
         # Choose center candidates by sampling with probability proportional
         # to the squared distance to the closest existing center
         rand_vals = random_state.random_sample(n_local_trials) * current_pot
@@ -124,6 +131,9 @@ def _k_init(X, n_clusters, x_squared_norms, random_state, n_local_trials=None):
         best_pot = None
         best_dist_sq = None
         for trial in range(n_local_trials):
+            # freq counting
+            freq += 1
+            # /freq counting
             # Compute potential when including center candidate
             new_dist_sq = np.minimum(closest_dist_sq,
                                      distance_to_candidates[trial])
@@ -151,6 +161,11 @@ def _k_init(X, n_clusters, x_squared_norms, random_state, n_local_trials=None):
 
 def _validate_center_shape(X, n_centers, centers):
     """Check if centers is compatible with X and n_centers"""
+    print("_validate_center_shape has been called")
+    # freq counting
+    global freq
+    freq += 1
+    # /freq counting
     if len(centers) != n_centers:
         raise ValueError('The shape of the initial centers (%s) '
                          'does not match the number of clusters %i'
@@ -164,6 +179,11 @@ def _validate_center_shape(X, n_centers, centers):
 
 def _tolerance(X, tol):
     """Return a tolerance which is independent of the dataset"""
+    print("_tolerance has been called")
+    # freq counting
+    global freq
+    freq += 1
+    # /freq counting
     if sp.issparse(X):
         variances = mean_variance_axis(X, axis=0)[1]
     else:
@@ -175,9 +195,11 @@ def k_means(X, n_clusters, init='k-means++', precompute_distances='auto',
             n_init=10, max_iter=300, verbose=False,
             tol=1e-4, random_state=None, copy_x=True, n_jobs=1,
             algorithm="auto", return_n_iter=False):
-    print("hellooooo")
+    print("k_means has been called")
+    # freq counting
     global freq
-    freq+=1
+    freq += 1
+    # /freq counting
     """K-means clustering algorithm.
 
     Read more in the :ref:`User Guide <k_means>`.
@@ -284,11 +306,9 @@ def k_means(X, n_clusters, init='k-means++', precompute_distances='auto',
         raise ValueError("Invalid number of initializations."
                          " n_init=%d must be bigger than zero." % n_init)
     random_state = check_random_state(random_state)
-    freq+=1
     if max_iter <= 0:
         raise ValueError('Number of iterations should be a positive number,'
                          ' got %d instead' % max_iter)
-    freq+=1
     best_inertia = np.infty
     X = as_float_array(X, copy=copy_x)
     tol = _tolerance(X, tol)
@@ -313,7 +333,6 @@ def k_means(X, n_clusters, init='k-means++', precompute_distances='auto',
     if not sp.issparse(X):
         # The copy was already done above
         X -= X_mean
-    freq+=2
     if hasattr(init, '__array__'):
         init = check_array(init, dtype=X.dtype.type, copy=True)
         _validate_center_shape(X, n_clusters, init)
@@ -325,7 +344,6 @@ def k_means(X, n_clusters, init='k-means++', precompute_distances='auto',
                 'performing only one init in k-means instead of n_init=%d'
                 % n_init, RuntimeWarning, stacklevel=2)
             n_init = 1
-    freq+=2
     # precompute squared norms of data points
     x_squared_norms = row_norms(X, squared=True)
 
@@ -348,6 +366,7 @@ def k_means(X, n_clusters, init='k-means++', precompute_distances='auto',
         # of the best results (as opposed to one set per run per thread).
         for it in range(n_init):
             # run a k-means once
+            freq += 1
             labels, inertia, centers, n_iter_ = kmeans_single(
                 X, n_clusters, max_iter=max_iter, init=init, verbose=verbose,
                 precompute_distances=precompute_distances, tol=tol,
@@ -395,6 +414,10 @@ def _kmeans_single_elkan(X, n_clusters, max_iter=300, init='k-means++',
                          random_state=None, tol=1e-4,
                          precompute_distances=True):
     print("_kmeans_single_elkan has been called")
+    # freq counting
+    global freq
+    freq += 1
+    # /freq counting
     if sp.issparse(X):
         raise ValueError("algorithm='elkan' not supported for sparse input X")
     X = check_array(X, order="C")
@@ -481,6 +504,12 @@ def _kmeans_single_lloyd(X, n_clusters, max_iter=300, init='k-means++',
         Number of iterations run.
     """
     print("_kmeans_single_lloyd has been called")
+
+    # freq counting 
+    global freq
+    freq += 1
+    # /freq counting
+
     random_state = check_random_state(random_state)
 
     best_labels, best_inertia, best_centers = None, None, None
@@ -496,6 +525,7 @@ def _kmeans_single_lloyd(X, n_clusters, max_iter=300, init='k-means++',
 
     # iterations
     for i in range(max_iter):
+        freq += 1
         centers_old = centers.copy()
         # labels assignment is also called the E-step of EM
         labels, inertia = \
@@ -618,6 +648,10 @@ def _labels_inertia(X, x_squared_norms, centers,
         Sum of distances of samples to their closest cluster center.
     """
     print("_labels_inertia has been called")
+    # freq counting 
+    global freq
+    freq += 1
+    # /freq counting
     n_samples = X.shape[0]
     # set the default value of centers to -1 to be able to detect any anomaly
     # easily
@@ -671,6 +705,11 @@ def _init_centroids(X, k, init, random_state=None, x_squared_norms=None,
     -------
     centers: array, shape(k, n_features)
     """
+    print("_init_centroids has been called")
+    # freq counting
+    global freq
+    freq += 1
+    # /freq counting
     random_state = check_random_state(random_state)
     n_samples = X.shape[0]
 
@@ -847,12 +886,15 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
     it can be useful to restart it several times.
 
     """
-
     def __init__(self, n_clusters=8, init='k-means++', n_init=10,
                  max_iter=300, tol=1e-4, precompute_distances='auto',
                  verbose=0, random_state=None, copy_x=True,
                  n_jobs=1, algorithm='auto'):
-        print("KMeans has been called oye")
+        print("class KMeans has been called oye")
+        # freq counting
+        global freq
+        freq += 1
+        # /freq counting
         self.n_clusters = n_clusters
         self.init = init
         self.max_iter = max_iter
@@ -867,6 +909,10 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
 
     def _check_fit_data(self, X):
         print("_check_fit_data called")
+        # freq counting
+        global freq
+        freq += 1
+        # /freq counting
         """Verify that the number of samples given is larger than k"""
         X = check_array(X, accept_sparse='csr', dtype=[np.float64, np.float32])
         if X.shape[0] < self.n_clusters:
@@ -876,6 +922,10 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
 
     def _check_test_data(self, X):
         print("_check_test_data called")
+        # freq counting
+        global freq
+        freq += 1
+        # /freq counting
         X = check_array(X, accept_sparse='csr', dtype=FLOAT_DTYPES)
         n_samples, n_features = X.shape
         expected_n_features = self.cluster_centers_.shape[1]
@@ -886,10 +936,8 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
 
         return X
 
+
     def fit(self, X, y=None):
-        print("fit called")
-        global freq
-        freq+=1
         """Compute k-means clustering.
 
         Parameters
@@ -897,7 +945,11 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         X : array-like or sparse matrix, shape=(n_samples, n_features)
             Training instances to cluster.
         """
-        print("Fit has been called")
+        print("KMeans.fit called")
+        # freq counting
+        global freq
+        freq += 1
+        # /freq counting
         random_state = check_random_state(self.random_state)
         X = self._check_fit_data(X)
 
@@ -912,16 +964,19 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         return self
 
     def fit_predict(self, X, y=None):
-        print("fit_predict called")
         """Compute cluster centers and predict cluster index for each sample.
 
         Convenience method; equivalent to calling fit(X) followed by
         predict(X).
         """
+        print("fit_predict called")
+        # freq counting 
+        global freq
+        freq += 1
+        # /freq counting
         return self.fit(X).labels_
 
     def fit_transform(self, X, y=None):
-        print("fit_transform called")
         """Compute clustering and transform X to cluster-distance space.
 
         Equivalent to fit(X).transform(X), but more efficiently implemented.
@@ -930,11 +985,15 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         # np.array or CSR format already.
         # XXX This skips _check_test_data, which may change the dtype;
         # we should refactor the input validation.
+        print("fit_transform called")
+        # freq counting 
+        global freq
+        freq += 1
+        # /freq counting
         X = self._check_fit_data(X)
         return self.fit(X)._transform(X)
 
     def transform(self, X, y=None):
-        print("transform called")
         """Transform X to a cluster-distance space.
 
         In the new space, each dimension is the distance to the cluster
@@ -951,18 +1010,26 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         X_new : array, shape [n_samples, k]
             X transformed in the new space.
         """
+        print("transform called")
+        # freq counting 
+        global freq
+        freq += 1
+        # /freq counting
         check_is_fitted(self, 'cluster_centers_')
 
         X = self._check_test_data(X)
         return self._transform(X)
 
     def _transform(self, X):
-        print("_transform called")
         """guts of transform method; no input validation"""
+        print("_transform called")
+        # freq counting 
+        global freq
+        freq += 1
+        # /freq counting
         return euclidean_distances(X, self.cluster_centers_)
 
     def predict(self, X):
-        print("predict called")
         """Predict the closest cluster each sample in X belongs to.
 
         In the vector quantization literature, `cluster_centers_` is called
@@ -979,6 +1046,11 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         labels : array, shape [n_samples,]
             Index of the cluster each sample belongs to.
         """
+        print("predict called")
+        # freq counting 
+        global freq
+        freq += 1
+        # /freq counting
         check_is_fitted(self, 'cluster_centers_')
 
         X = self._check_test_data(X)
@@ -986,7 +1058,6 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         return _labels_inertia(X, x_squared_norms, self.cluster_centers_)[0]
 
     def score(self, X, y=None):
-        print("score called")
         """Opposite of the value of X on the K-means objective.
 
         Parameters
@@ -999,11 +1070,20 @@ class KMeans(BaseEstimator, ClusterMixin, TransformerMixin):
         score : float
             Opposite of the value of X on the K-means objective.
         """
+        print("score called")
+        # freq counting 
+        global freq
+        freq += 1
+        # /freq counting
         check_is_fitted(self, 'cluster_centers_')
 
         X = self._check_test_data(X)
         x_squared_norms = row_norms(X, squared=True)
         return -_labels_inertia(X, x_squared_norms, self.cluster_centers_)[1]
+
+
+    def printfrequency():
+        return freq
 
 
 def _mini_batch_step(X, x_squared_norms, centers, counts,
@@ -1070,6 +1150,10 @@ def _mini_batch_step(X, x_squared_norms, centers, counts,
     """
     # Perform label assignment to nearest centers
     print("_mini_batch_step called")
+    # freq counting 
+    global freq
+    freq += 1
+    # /freq counting
     nearest_center, inertia = _labels_inertia(X, x_squared_norms, centers,
                                               distances=distances)
 
@@ -1556,7 +1640,7 @@ class MiniBatchKMeans(KMeans):
         return self
 
     def predict(self, X):
-        """Predict the closest cluster each sample in X belongs to.
+        """Predict the closest cluster ea ch sample in X belongs to.
 
         In the vector quantization literature, `cluster_centers_` is called
         the code book and each value returned by `predict` is the index of
