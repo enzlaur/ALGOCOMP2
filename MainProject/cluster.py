@@ -6,16 +6,41 @@ import numpy as np
 from numpy.random import rand
 import matplotlib.pyplot as plt
 
+
+# from sklearn2.cluster import KMeans
+
 from sklearn.cluster import KMeans
 
-# from sklearn.cluster.k_means_ import freq as freqme
+
+# from sklearn.cluster.k_means_ import3 freq as freqme
 from sklearn.cluster.k_means_ import printfrequency as kmeanfreq
 from sklearn.cluster.k_means_ import getfreq as kmeangetfreq
 from sklearn.utils.validation import printfreq as validfreq
 from sklearn.utils.validation import getfreq as validgetfreq
 from sklearn.cluster.spectral import printfreq as spectralfreq
 from sklearn.cluster.k_means_ import getlloyditer as lloyditer
+from sklearn.base import printfrequency as basefreq
+from sklearn.base import getfreq as basegetfreq
+from sklearn.metrics.pairwise import getfreq as pairgetfreq
+from sklearn.metrics.pairwise import printfrequency as pairfreq
+from sklearn.utils.__init__ import printfrequency as initfreq
+from sklearn.utils.__init__ import getfreq as initgetfreq
+from sklearn.utils.extmath import printfrequency as extmathfreq
+from sklearn.utils.extmath import getfreq as extmathgetfreq
+from sklearn.externals.joblib.parallel import printfrequency as parallelfreq
+from sklearn.externals.joblib.parallel import getfreq as parallelgetfreq
+from numpy.core.numeric import printfreq as numericfreq
+from numpy.core.numeric import getfreq as numericgetfreq
+from numpy.core.fromnumeric import printfreq as fromnumericfreq
+from numpy.core.fromnumeric import getfreq as fromnumericgetfreq
 
+
+# from sklearn.cluster._k_means_elkan import k_means_elkan
+# from sklearn.cluster._k_means_elka import printfrequency as elkanfreq
+# from sklearn.cluster._k_means_elkan import getfreq as elkangetfreq
+
+# kme = k_means_elkan
+# kme
 #practice of reading files
 def read_me():
     sampleFile = open('smalldata.csv', 'rb')
@@ -49,10 +74,19 @@ def usewith(nclusters, algotype, dataname):
     kmeans = KMeans(n_clusters=nclusters, random_state=np.random, algorithm=algotype)
     kmeans.fit(points)
     # print the freq count per class (kmeans, validations, etc)
+    initfreq()
     kmeanfreq()
     validfreq()
     spectralfreq()
-    totalfreq = kmeangetfreq() + validgetfreq()
+    basefreq()
+    pairfreq()
+    extmathfreq()
+    parallelfreq()
+    numericfreq()
+    fromnumericfreq()
+    # elkanfreq()
+    # total
+    totalfreq = kmeangetfreq() + validgetfreq() + basegetfreq() + pairgetfreq() + initgetfreq() + extmathgetfreq() + parallelgetfreq() + numericgetfreq() + fromnumericgetfreq()
     # print total freq
     print("Total freq count: " + str(totalfreq))
     # print expected range of freq count
@@ -118,6 +152,8 @@ def testmatplot():
     ax.legend()
     ax.grid(True)
     plt.show()
+
+
 
 
 # createscatter()

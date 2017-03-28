@@ -54,6 +54,11 @@ def addfreq():
     freq+=1
 
 
+def addfreqby(b):
+    global freq
+    freq += b
+
+
 def getfreq():
     global freq
     return freq
@@ -67,7 +72,7 @@ def _k_init(X, n_clusters, x_squared_norms, random_state, n_local_trials=None):
     # print("_k_init has been called")
     # freq counting
     global freq
-    freq += 1
+    addfreq()
     # /freq counting
     """Init n_clusters seeds according to k-means++
 
@@ -131,8 +136,7 @@ def _k_init(X, n_clusters, x_squared_norms, random_state, n_local_trials=None):
     # Pick the remaining n_clusters-1 points
     for c in range(1, n_clusters):
         # freq counting
-
-        freq += 1
+        addfreqby(1)
         # /freq counting
         # Choose center candidates by sampling with probability proportional
         # to the squared distance to the closest existing center
@@ -149,7 +153,7 @@ def _k_init(X, n_clusters, x_squared_norms, random_state, n_local_trials=None):
         best_dist_sq = None
         for trial in range(n_local_trials):
             # freq counting
-            freq += 1
+            addfreqby(2)
             # /freq counting
             # Compute potential when including center candidate
             new_dist_sq = np.minimum(closest_dist_sq,
@@ -158,14 +162,17 @@ def _k_init(X, n_clusters, x_squared_norms, random_state, n_local_trials=None):
 
             # Store result if it is the best local trial so far
             if (best_candidate is None) or (new_pot < best_pot):
+                addfreq()
                 best_candidate = candidate_ids[trial]
                 best_pot = new_pot
                 best_dist_sq = new_dist_sq
 
         # Permanently add best center candidate found in local tries
         if sp.issparse(X):
+            addfreq()
             centers[c] = X[best_candidate].toarray()
         else:
+            addfreq()
             centers[c] = X[best_candidate]
         current_pot = best_pot
         closest_dist_sq = best_dist_sq
@@ -546,7 +553,7 @@ def _kmeans_single_lloyd(X, n_clusters, max_iter=300, init='k-means++',
     # laurenz
     # iterations
     for i in range(max_iter):
-        freq += 1
+        addfreqby(5)
         centers_old = centers.copy()
         # labels assignment is also called the E-step of EM
         labels, inertia = \
@@ -616,7 +623,7 @@ def _labels_inertia_precompute_dense(X, x_squared_norms, centers, distances):
 
     """
     # print("_labels_inertia_precompute_dense has been called")
-
+    addfreq()
     n_samples = X.shape[0]
 
     # Breakup nearest neighbor distance computation into batches to prevent
@@ -670,7 +677,7 @@ def _labels_inertia(X, x_squared_norms, centers,
     # print("_labels_inertia has been called")
     # freq counting 
     global freq
-    freq += 1
+    addfreq()
     # /freq counting
     n_samples = X.shape[0]
     # set the default value of centers to -1 to be able to detect any anomaly

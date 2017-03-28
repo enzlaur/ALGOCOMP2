@@ -1,16 +1,581 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="739d7bd0-edc4-48ee-bea2-ffe699a0a346" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TestHere/cluster.py" afterPath="$PROJECT_DIR$/MainProject/cluster.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TestHere/kmeans.py" afterPath="$PROJECT_DIR$/MainProject/kmeans.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TestHere/shot-def-dist-10k.csv" afterPath="$PROJECT_DIR$/MainProject/shot-def-dist-10k.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TestHere/shot-def-dist-5k.csv" afterPath="$PROJECT_DIR$/MainProject/shot-def-dist-5k.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TestHere/smalldata.csv" afterPath="$PROJECT_DIR$/MainProject/smalldata.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TestHere/spectral.py" afterPath="$PROJECT_DIR$/MainProject/spectral.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TestHere/testMe.ipynb" afterPath="$PROJECT_DIR$/MainProject/clusternb.ipynb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TestHere/validation.py" afterPath="$PROJECT_DIR$/MainProject/validation.py" />
+    <list default="true" id="739d7bd0-edc4-48ee-bea2-ffe699a0a346" name="Default" comment="fixed csv file reading">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MainProject/_k_means_elkan.cpython-36m-darwin.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/data/diabetes_data.csv.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/data/diabetes_target.csv.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/data/digits.csv.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/images/china.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/images/flower.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MainProject/_k_means.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MainProject/_k_means_elkan.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MainProject/_k_means_elkan.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MainProject/k_means_elkan.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MainProject/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/__check_build/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/__check_build/_check_build.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/__check_build/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/_build_utils/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/_isotonic.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/calibration.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/_dbscan_inner.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/_feature_agglomeration.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/_hierarchical.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/_k_means.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/_k_means_elkan.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/affinity_propagation_.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/bicluster.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/birch.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/dbscan_.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/hierarchical.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/k_means_.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/mean_shift_.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/spectral.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/tests/common.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/tests/test_affinity_propagation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/tests/test_bicluster.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/tests/test_birch.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/tests/test_dbscan.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/tests/test_hierarchical.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/tests/test_k_means.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/tests/test_mean_shift.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cluster/tests/test_spectral.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/covariance/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/covariance/empirical_covariance_.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/covariance/graph_lasso_.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/covariance/outlier_detection.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/covariance/robust_covariance.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/covariance/shrunk_covariance_.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/covariance/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/covariance/tests/test_covariance.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/covariance/tests/test_graph_lasso.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/covariance/tests/test_robust_covariance.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cross_decomposition/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cross_decomposition/cca_.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cross_decomposition/pls_.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cross_decomposition/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cross_decomposition/tests/test_pls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/cross_validation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/_svmlight_format.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/california_housing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/covtype.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/data/boston_house_prices.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/data/breast_cancer.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/data/iris.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/data/linnerud_exercise.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/data/linnerud_physiological.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/data/wine_data.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/descr/boston_house_prices.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/descr/breast_cancer.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/descr/diabetes.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/descr/digits.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/descr/iris.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/descr/linnerud.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/descr/wine_data.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/images/README.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/kddcup99.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/lfw.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/mlcomp.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/mldata.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/olivetti_faces.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/rcv1.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/samples_generator.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/species_distributions.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/svmlight_format.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/tests/data/svmlight_classification.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/tests/data/svmlight_invalid.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/tests/data/svmlight_invalid_order.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/tests/data/svmlight_multilabel.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/tests/test_20news.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/tests/test_base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/tests/test_covtype.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/tests/test_kddcup99.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/tests/test_lfw.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/tests/test_mldata.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/tests/test_rcv1.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/tests/test_samples_generator.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/tests/test_svmlight_format.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/datasets/twenty_newsgroups.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/_online_lda.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/cdnmf_fast.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/dict_learning.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/factor_analysis.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/fastica_.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/incremental_pca.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/kernel_pca.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/nmf.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/online_lda.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/pca.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/sparse_pca.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/tests/test_dict_learning.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/tests/test_factor_analysis.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/tests/test_fastica.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/tests/test_incremental_pca.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/tests/test_kernel_pca.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/tests/test_nmf.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/tests/test_online_lda.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/tests/test_pca.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/tests/test_sparse_pca.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/tests/test_truncated_svd.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/decomposition/truncated_svd.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/discriminant_analysis.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/dummy.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/_gradient_boosting.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/bagging.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/forest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/gradient_boosting.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/iforest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/partial_dependence.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/tests/test_bagging.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/tests/test_base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/tests/test_forest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/tests/test_gradient_boosting.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/tests/test_gradient_boosting_loss_functions.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/tests/test_iforest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/tests/test_partial_dependence.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/tests/test_voting_classifier.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/tests/test_weight_boosting.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/voting_classifier.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/ensemble/weight_boosting.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/exceptions.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/copy_joblib.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/funcsigs.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/joblib/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/joblib/_compat.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/joblib/_memory_helpers.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/joblib/_multiprocessing_helpers.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/joblib/_parallel_backends.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/joblib/backports.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/joblib/disk.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/joblib/format_stack.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/joblib/func_inspect.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/joblib/hashing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/joblib/logger.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/joblib/memory.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/joblib/my_exceptions.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/joblib/numpy_pickle.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/joblib/numpy_pickle_compat.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/joblib/numpy_pickle_utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/joblib/parallel.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/joblib/pool.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/six.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/externals/test_externals_setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_extraction/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_extraction/_hashing.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_extraction/dict_vectorizer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_extraction/hashing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_extraction/image.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_extraction/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_extraction/stop_words.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_extraction/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_extraction/tests/test_dict_vectorizer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_extraction/tests/test_feature_hasher.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_extraction/tests/test_image.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_extraction/tests/test_text.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_extraction/text.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_selection/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_selection/base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_selection/from_model.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_selection/mutual_info_.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_selection/rfe.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_selection/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_selection/tests/test_base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_selection/tests/test_chi2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_selection/tests/test_feature_select.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_selection/tests/test_from_model.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_selection/tests/test_mutual_info.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_selection/tests/test_rfe.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_selection/tests/test_variance_threshold.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_selection/univariate_selection.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/feature_selection/variance_threshold.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/gaussian_process/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/gaussian_process/correlation_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/gaussian_process/gaussian_process.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/gaussian_process/gpc.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/gaussian_process/gpr.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/gaussian_process/kernels.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/gaussian_process/regression_models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/gaussian_process/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/gaussian_process/tests/test_gaussian_process.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/gaussian_process/tests/test_gpc.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/gaussian_process/tests/test_gpr.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/gaussian_process/tests/test_kernels.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/grid_search.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/isotonic.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/kernel_approximation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/kernel_ridge.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/learning_curve.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/bayes.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/cd_fast.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/coordinate_descent.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/huber.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/least_angle.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/logistic.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/omp.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/passive_aggressive.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/perceptron.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/randomized_l1.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/ransac.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/ridge.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/sag.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/sag_fast.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/sgd_fast.pxd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/sgd_fast.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/sgd_fast_helpers.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/stochastic_gradient.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/tests/test_base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/tests/test_bayes.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/tests/test_coordinate_descent.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/tests/test_huber.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/tests/test_least_angle.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/tests/test_logistic.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/tests/test_omp.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/tests/test_passive_aggressive.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/tests/test_perceptron.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/tests/test_randomized_l1.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/tests/test_ransac.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/tests/test_ridge.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/tests/test_sag.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/tests/test_sgd.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/tests/test_sparse_coordinate_descent.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/tests/test_theil_sen.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/linear_model/theil_sen.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/manifold/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/manifold/_barnes_hut_tsne.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/manifold/_utils.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/manifold/isomap.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/manifold/locally_linear.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/manifold/mds.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/manifold/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/manifold/spectral_embedding_.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/manifold/t_sne.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/manifold/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/manifold/tests/test_isomap.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/manifold/tests/test_locally_linear.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/manifold/tests/test_mds.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/manifold/tests/test_spectral_embedding.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/manifold/tests/test_t_sne.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/classification.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/cluster/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/cluster/bicluster.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/cluster/expected_mutual_info_fast.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/cluster/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/cluster/supervised.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/cluster/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/cluster/tests/test_bicluster.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/cluster/tests/test_supervised.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/cluster/tests/test_unsupervised.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/cluster/unsupervised.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/pairwise.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/pairwise_fast.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/ranking.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/regression.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/scorer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/tests/test_classification.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/tests/test_common.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/tests/test_pairwise.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/tests/test_ranking.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/tests/test_regression.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/metrics/tests/test_score_objects.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/mixture/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/mixture/base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/mixture/bayesian_mixture.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/mixture/dpgmm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/mixture/gaussian_mixture.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/mixture/gmm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/mixture/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/mixture/tests/test_bayesian_mixture.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/mixture/tests/test_dpgmm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/mixture/tests/test_gaussian_mixture.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/mixture/tests/test_gmm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/model_selection/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/model_selection/_search.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/model_selection/_split.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/model_selection/_validation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/model_selection/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/model_selection/tests/common.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/model_selection/tests/test_search.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/model_selection/tests/test_split.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/model_selection/tests/test_validation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/multiclass.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/multioutput.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/naive_bayes.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/approximate.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/ball_tree.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/binary_tree.pxi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/classification.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/dist_metrics.pxd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/dist_metrics.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/graph.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/kd_tree.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/kde.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/lof.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/nearest_centroid.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/regression.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/tests/test_approximate.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/tests/test_ball_tree.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/tests/test_dist_metrics.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/tests/test_kd_tree.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/tests/test_kde.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/tests/test_lof.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/tests/test_nearest_centroid.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/tests/test_neighbors.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/typedefs.pxd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/typedefs.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neighbors/unsupervised.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neural_network/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neural_network/_base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neural_network/_stochastic_optimizers.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neural_network/multilayer_perceptron.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neural_network/rbm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neural_network/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neural_network/tests/test_mlp.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neural_network/tests/test_rbm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/neural_network/tests/test_stochastic_optimizers.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/pipeline.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/preprocessing/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/preprocessing/_function_transformer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/preprocessing/data.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/preprocessing/imputation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/preprocessing/label.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/preprocessing/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/preprocessing/tests/test_data.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/preprocessing/tests/test_function_transformer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/preprocessing/tests/test_imputation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/preprocessing/tests/test_label.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/random_projection.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/semi_supervised/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/semi_supervised/label_propagation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/semi_supervised/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/semi_supervised/tests/test_label_propagation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/ATL_drefasum.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/ATL_drefcopy.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/ATL_drefgemv.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/ATL_drefgemvN.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/ATL_drefgemvT.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/ATL_drefger.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/ATL_drefrot.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/ATL_drefrotg.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/ATL_dsrefdot.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/ATL_srefasum.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/ATL_srefcopy.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/ATL_srefgemv.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/ATL_srefgemvN.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/ATL_srefgemvT.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/ATL_srefger.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/ATL_srefnrm2.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/ATL_srefrot.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/ATL_srefrotg.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/README.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/atlas_aux.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/atlas_dsysinfo.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/atlas_enum.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/atlas_level1.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/atlas_level2.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/atlas_misc.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/atlas_ptalias1.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/atlas_ptalias2.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/atlas_refalias1.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/atlas_refalias2.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/atlas_reflevel1.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/atlas_reflevel2.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/atlas_reflvl2.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/atlas_refmisc.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/atlas_ssysinfo.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/atlas_type.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_dasum.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_daxpy.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_dcopy.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_ddot.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_dgemv.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_dger.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_dnrm2.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_drot.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_drotg.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_dscal.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_errprn.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_sasum.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_saxpy.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_scopy.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_sdot.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_sgemv.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_sger.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_snrm2.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_srot.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_srotg.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_sscal.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/src/cblas/cblas_xerbla.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/bounds.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/classes.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/liblinear.pxd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/liblinear.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/libsvm.pxd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/libsvm.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/libsvm_sparse.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/src/liblinear/COPYRIGHT" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/src/liblinear/liblinear_helper.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/src/liblinear/linear.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/src/liblinear/linear.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/src/liblinear/tron.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/src/liblinear/tron.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/src/libsvm/LIBSVM_CHANGES" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/src/libsvm/libsvm_helper.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/src/libsvm/libsvm_sparse_helper.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/src/libsvm/libsvm_template.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/src/libsvm/svm.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/src/libsvm/svm.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/tests/test_bounds.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/tests/test_sparse.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/svm/tests/test_svm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/test_base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/test_calibration.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/test_check_build.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/test_common.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/test_cross_validation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/test_discriminant_analysis.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/test_dummy.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/test_grid_search.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/test_init.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/test_isotonic.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/test_kernel_approximation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/test_kernel_ridge.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/test_learning_curve.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/test_metaestimators.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/test_multiclass.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/test_multioutput.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/test_naive_bayes.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/test_pipeline.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tests/test_random_projection.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tree/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tree/_criterion.pxd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tree/_criterion.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tree/_splitter.pxd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tree/_splitter.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tree/_tree.pxd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tree/_tree.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tree/_utils.pxd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tree/_utils.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tree/export.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tree/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tree/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tree/tests/test_export.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tree/tests/test_tree.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/tree/tree.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/_logistic_sigmoid.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/_random.pxd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/_random.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/_scipy_sparse_lsqr_backport.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/arpack.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/arrayfuncs.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/bench.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/class_weight.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/deprecation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/estimator_checks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/extmath.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/fast_dict.pxd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/fast_dict.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/fixes.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/graph.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/graph_shortest_path.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/lgamma.pxd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/lgamma.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/linear_assignment_.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/metaestimators.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/mocking.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/multiclass.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/murmurhash.pxd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/murmurhash.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/optimize.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/random.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/seq_dataset.pxd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/seq_dataset.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/sparsefuncs.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/sparsefuncs_fast.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/sparsetools/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/sparsetools/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/sparsetools/_graph_tools.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/sparsetools/_graph_validation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/sparsetools/_traversal.pyx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/sparsetools/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/sparsetools/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/sparsetools/tests/test_traversal.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/src/MurmurHash3.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/src/MurmurHash3.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/src/cholesky_delete.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/src/gamma.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/src/gamma.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/stats.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/testing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_bench.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_class_weight.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_estimator_checks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_extmath.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_fast_dict.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_fixes.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_graph.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_linear_assignment.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_metaestimators.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_multiclass.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_murmurhash.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_optimize.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_random.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_seq_dataset.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_shortest_path.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_sparsefuncs.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_stats.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_testing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/tests/test_validation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/validation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/weight_vector.pxd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sklearn2/utils/weight_vector.pyx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MainProject/cluster.py" afterPath="$PROJECT_DIR$/MainProject/cluster.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MainProject/clusternb.ipynb" afterPath="$PROJECT_DIR$/MainProject/clusternb.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MainProject/kmeans.py" afterPath="$PROJECT_DIR$/MainProject/kmeans.py" />
     </list>
     <ignored path="ALGOCOMP2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,8 +589,11 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ALGOCOMP2$cluster__1_.coverage" NAME="cluster (1) Coverage Results" MODIFIED="1490687968247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MainProject" />
+    <SUITE FILE_PATH="coverage/ALGOCOMP2$cluster__1_.coverage" NAME="cluster (1) Coverage Results" MODIFIED="1490706148019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MainProject" />
     <SUITE FILE_PATH="coverage/ALGOCOMP2$cluster.coverage" NAME="cluster Coverage Results" MODIFIED="1490687410318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestHere" />
+    <SUITE FILE_PATH="coverage/ALGOCOMP2$setup__1_.coverage" NAME="setup (1) Coverage Results" MODIFIED="1490708690286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sklearn2/cluster" />
+    <SUITE FILE_PATH="coverage/ALGOCOMP2$setup.coverage" NAME="setup Coverage Results" MODIFIED="1490708453535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MainProject" />
+    <SUITE FILE_PATH="coverage/ALGOCOMP2$_k_means_elkan_pyx.coverage" NAME="_k_means_elkan.pyx Coverage Results" MODIFIED="1490702724367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MainProject" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -42,54 +610,102 @@
     <favorites_list name="ALGOCOMP2" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="kmeans.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MainProject/kmeans.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1092" column="26" selection-start-line="1092" selection-start-column="26" selection-end-line="1092" selection-end-column="26" />
-              <folding>
-                <element signature="e#514#529#0" expanded="true" />
-                <marker date="1490642576000" expanded="true" signature="32038:32099" placeholder="import ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="k_means_.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/k_means_.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="928" column="34" selection-start-line="928" selection-start-column="34" selection-end-line="928" selection-end-column="34" />
-              <folding>
-                <element signature="e#514#529#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cluster.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MainProject/cluster.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.535714">
-              <caret line="42" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-              <folding>
-                <element signature="e#17#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="clusternb.ipynb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MainProject/clusternb.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.41977078">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="setup.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/MainProject/setup.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.34912717">
+                  <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+                  <folding>
+                    <element signature="e#21#64#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="cluster.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/MainProject/cluster.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+                  <folding>
+                    <element signature="e#17#27#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="k_means_.py" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/k_means_.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-19.928572">
+                  <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="41" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/utils/__init__.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+                  <folding>
+                    <element signature="e#68#100#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="_k_means_elkan.pyx" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/MainProject/_k_means_elkan.pyx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-9.214286">
+                  <caret line="79" column="5" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="5" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_k_means.pyx" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/MainProject/_k_means.pyx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-7.285714">
+                  <caret line="33" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="436" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_k_means.pyx" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sklearn2/cluster/_k_means.pyx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="436" column="0" selection-start-line="436" selection-start-column="0" selection-end-line="436" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="setup.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/sklearn2/cluster/setup.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.06733167">
+                  <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -107,16 +723,37 @@
         <option value="$PROJECT_DIR$/Examples/NoIdea.ipynb" />
         <option value="$USER_HOME$/Library/Caches/PyCharm50/python_stubs/-1304954846/sklearn/cluster/_k_means.py" />
         <option value="$PROJECT_DIR$/Examples/plot_cluster_iris.ipynb" />
-        <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/utils/validation.py" />
-        <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/spectral.py" />
         <option value="$PROJECT_DIR$/TestHere/spectral.py" />
         <option value="$PROJECT_DIR$/TestHere/validation.py" />
         <option value="$PROJECT_DIR$/TestHere/kmeans.py" />
         <option value="$PROJECT_DIR$/TestHere/testMe.ipynb" />
-        <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/k_means_.py" />
         <option value="$PROJECT_DIR$/TestHere/cluster.py" />
-        <option value="$PROJECT_DIR$/MainProject/cluster.py" />
         <option value="$PROJECT_DIR$/MainProject/clusternb.ipynb" />
+        <option value="$PROJECT_DIR$/MainProject/kmeans.py" />
+        <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/metrics/pairwise.py" />
+        <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/scipy/sparse/base.py" />
+        <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/utils/random.py" />
+        <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/externals/joblib/parallel.py" />
+        <option value="$USER_HOME$/Library/Caches/PyCharm50/python_stubs/1185726240/sklearn/cluster/_k_means_elkan.py" />
+        <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/utils/validation.py" />
+        <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/core/numeric.py" />
+        <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/core/fromnumeric.py" />
+        <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/spectral.py" />
+        <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/base.py" />
+        <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/utils/extmath.py" />
+        <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/utils/__init__.py" />
+        <option value="$PROJECT_DIR$/sklearn2/cluster/k_means_.py" />
+        <option value="$PROJECT_DIR$/sklearn2/utils/sparsefuncs_fast.pyx" />
+        <option value="$PROJECT_DIR$/MainProject/k_means_elkan.py" />
+        <option value="$PROJECT_DIR$/sklearn2/cluster/_k_means_elkan.pyx" />
+        <option value="$PROJECT_DIR$/MainProject/_k_means_elkan.pyx.py" />
+        <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/k_means_.py" />
+        <option value="$PROJECT_DIR$/MainProject/cluster.py" />
+        <option value="$PROJECT_DIR$/MainProject/_k_means.pyx" />
+        <option value="$PROJECT_DIR$/MainProject/_k_means_elkan.pyx" />
+        <option value="$PROJECT_DIR$/sklearn2/cluster/setup.py" />
+        <option value="$PROJECT_DIR$/MainProject/setup.py" />
+        <option value="$PROJECT_DIR$/sklearn2/cluster/_k_means.pyx" />
       </list>
     </option>
   </component>
@@ -155,34 +792,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ALGOCOMP2">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="TestHere">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ALGOCOMP2">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -193,6 +802,108 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 3.6.0 (~/anaconda/bin/python) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ALGOCOMP2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 3.6.0 (~/anaconda/bin/python) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site-packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ALGOCOMP2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 3.6.0 (~/anaconda/bin/python) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site-packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sklearn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ALGOCOMP2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 3.6.0 (~/anaconda/bin/python) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site-packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sklearn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cluster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ALGOCOMP2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ALGOCOMP2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sklearn2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ALGOCOMP2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ALGOCOMP2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sklearn2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cluster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -225,6 +936,34 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ALGOCOMP2">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="TestHere">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ALGOCOMP2">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -235,7 +974,7 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="FullScreen" value="true" />
   </component>
-  <component name="RunManager" selected="Python.cluster (1)">
+  <component name="RunManager" selected="Python.setup (1)">
     <configuration default="false" name="cluster" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -269,6 +1008,60 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MainProject/cluster.py" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="setup" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MainProject" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ALGOCOMP2" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MainProject/setup.py" />
+      <option name="PARAMETERS" value="build_ext --inplace" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="_k_means_elkan.pyx" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MainProject" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ALGOCOMP2" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MainProject/_k_means_elkan.pyx" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="setup (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sklearn2/cluster" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ALGOCOMP2" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sklearn2/cluster/setup.py" />
+      <option name="PARAMETERS" value="build_ext --inplace" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
@@ -465,14 +1258,20 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.cluster" />
       <item index="1" class="java.lang.String" itemvalue="Python.cluster (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.setup" />
+      <item index="3" class="java.lang.String" itemvalue="Python._k_means_elkan.pyx" />
+      <item index="4" class="java.lang.String" itemvalue="Python.setup (1)" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.cluster (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.cluster" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.setup (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.setup" />
+        <item index="2" class="java.lang.String" itemvalue="Python.cluster (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python._k_means_elkan.pyx" />
+        <item index="4" class="java.lang.String" itemvalue="Python.cluster" />
       </list>
     </recent_temporary>
   </component>
@@ -559,27 +1358,33 @@
       <option name="project" value="LOCAL" />
       <updated>1490687465287</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fixed csv file reading">
+      <created>1490688683828</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1490688683828</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="true" show_stripe_button="true" weight="0.34813753" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="836" y="4" width="376" height="1033" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40379748" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3273165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="true" show_stripe_button="true" weight="0.7994269" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.1991404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="836" y="4" width="376" height="1033" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.7994269" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972324" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="100" y="100" width="1720" height="880" />
@@ -612,221 +1417,16 @@
     <MESSAGE value="Updated iPython Notebook" />
     <MESSAGE value="Pushed 5k and 10k data sets (in csv)" />
     <MESSAGE value="Added options from clusters, algo type, and data size" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added options from clusters, algo type, and data size" />
+    <MESSAGE value="fixed csv file reading" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed csv file reading" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MainProject/kmeans.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#514#529#0" expanded="true" />
-            <marker date="1490642576000" expanded="true" signature="32038:32099" placeholder="import ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainProject/clusternb.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="-1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Examples/plot_cluster_iris.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="-1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainProject/cluster.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-          <folding>
-            <element signature="e#17#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/k_means_.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="195" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1543" selection-end-column="0" />
-          <folding>
-            <element signature="e#514#529#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/tests/test_k_means.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainProject/clusternb.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="-1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainProject/cluster.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding>
-            <element signature="e#17#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainProject/kmeans.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#514#529#0" expanded="true" />
-            <marker date="1490642576000" expanded="true" signature="32038:32099" placeholder="import ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Examples/plot_cluster_iris.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="-1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/k_means_.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-          <folding>
-            <element signature="e#514#529#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/tests/test_k_means.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainProject/cluster.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
-          <folding>
-            <element signature="e#17#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainProject/clusternb.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="-1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Examples/plot_cluster_iris.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="-1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/k_means_.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="58" selection-start-line="65" selection-start-column="58" selection-end-line="65" selection-end-column="58" />
-          <caret line="66" column="58" selection-start-line="66" selection-start-column="58" selection-end-line="66" selection-end-column="58" />
-          <folding>
-            <element signature="e#514#529#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainProject/cluster.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-          <folding>
-            <element signature="e#17#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainProject/clusternb.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="-1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Examples/plot_cluster_iris.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="-1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainProject/clusternb.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="-1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/k_means_.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="54" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
-          <folding>
-            <element signature="e#514#529#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainProject/clusternb.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="-1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/k_means_.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="54" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
-          <folding>
-            <element signature="e#514#529#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Examples/NoIdea.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="-1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Examples/plot_cluster_iris.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -889,13 +1489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.51221997">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21181263">
@@ -924,19 +1517,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/externals/joblib/parallel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.4716983">
-          <caret line="753" column="12" selection-start-line="753" selection-start-column="12" selection-end-line="753" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/tests/test_k_means.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -944,15 +1528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.43991855">
           <caret line="31" column="43" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm50/python_stubs/1185726240/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4796334">
-          <caret line="186" column="4" selection-start-line="186" selection-start-column="4" selection-end-line="186" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -964,21 +1539,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/utils/validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16264428">
-          <caret line="43" column="45" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
-          <folding>
-            <element signature="e#226#241#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/mean_shift_.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -986,19 +1550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.7522936">
           <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding>
-            <element signature="e#206#221#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/spectral.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23853211">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding>
-            <element signature="e#206#221#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1006,40 +1557,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20183486">
           <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
-          <folding>
-            <element signature="e#226#241#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainProject/kmeans.py">
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm50/python_stubs/1185726240/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1092" column="26" selection-start-line="1092" selection-start-column="26" selection-end-line="1092" selection-end-column="26" />
-          <folding>
-            <element signature="e#514#529#0" expanded="true" />
-            <marker date="1490642576000" expanded="true" signature="32038:32099" placeholder="import ..." />
-          </folding>
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="167" column="4" selection-start-line="167" selection-start-column="4" selection-end-line="167" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/k_means_.py">
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/scipy/sparse/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="928" column="34" selection-start-line="928" selection-start-column="34" selection-end-line="928" selection-end-column="34" />
-          <folding>
-            <element signature="e#514#529#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainProject/cluster.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.535714">
-          <caret line="42" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-          <folding>
-            <element signature="e#17#27#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="6.955056">
+          <caret line="1001" column="26" selection-start-line="1001" selection-start-column="26" selection-end-line="1001" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1047,6 +1579,255 @@
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/utils/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39325842">
+          <caret line="142" column="15" selection-start-line="142" selection-start-column="15" selection-end-line="142" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/externals/joblib/parallel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49438202">
+          <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/kmeans.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327032">
+          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+          <folding>
+            <marker date="1490689682000" expanded="true" signature="32179:32240" placeholder="import ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/birch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.6853933">
+          <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm50/python_stubs/1185726240/sklearn/cluster/_k_means_elkan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/random/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/utils/validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="154" column="35" selection-start-line="154" selection-start-column="29" selection-end-line="154" selection-end-column="35" />
+          <folding>
+            <element signature="e#226#241#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm50/python_stubs/1185726240/numpy/core/multiarray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.2284644">
+          <caret line="2725" column="0" selection-start-line="2725" selection-start-column="0" selection-end-line="2725" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/core/fromnumeric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.670412">
+          <caret line="2405" column="13" selection-start-line="2405" selection-start-column="13" selection-end-line="2405" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/core/numeric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="414" column="0" selection-start-line="414" selection-start-column="0" selection-end-line="414" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#64#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/spectral.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="11" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/scipy/sparse/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33707866">
+          <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/metrics/pairwise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11235955">
+          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/utils/extmath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/k_means_elkan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sklearn2/cluster/_k_means_elkan.pyx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4812968">
+          <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sklearn2/utils/sparsefuncs_fast.pyx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31421447">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="e#292#310#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sklearn2/cluster/k_means_.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5162095">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding>
+            <marker date="1490700156000" expanded="true" signature="32044:32105" placeholder="import ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/utils/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding>
+            <element signature="e#68#100#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/k_means_.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.928572">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/cluster.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+          <folding>
+            <element signature="e#17#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sklearn2/cluster/spectral.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/_k_means_elkan.pyx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.214286">
+          <caret line="79" column="5" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/_k_means.pyx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.285714">
+          <caret line="33" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="436" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sklearn2/cluster/_k_means.pyx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="436" column="0" selection-start-line="436" selection-start-column="0" selection-end-line="436" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sklearn2/cluster/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06733167">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainProject/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34912717">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+          <folding>
+            <element signature="e#21#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
