@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="739d7bd0-edc4-48ee-bea2-ffe699a0a346" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestHere/shot-def-dist-10k.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestHere/shot-def-dist-5k.csv" />
+    <list default="true" id="739d7bd0-edc4-48ee-bea2-ffe699a0a346" name="Default" comment="Pushed 5k and 10k data sets (in csv)">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestHere/cluster.py" afterPath="$PROJECT_DIR$/TestHere/cluster.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestHere/testMe.ipynb" afterPath="$PROJECT_DIR$/TestHere/testMe.ipynb" />
     </list>
     <ignored path="ALGOCOMP2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -18,7 +18,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ALGOCOMP2$cluster.coverage" NAME="cluster Coverage Results" MODIFIED="1490642377319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestHere" />
+    <SUITE FILE_PATH="coverage/ALGOCOMP2$cluster.coverage" NAME="cluster Coverage Results" MODIFIED="1490687410318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestHere" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -35,71 +35,45 @@
     <favorites_list name="ALGOCOMP2" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4862328">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="k_means_.py" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/k_means_.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-20.964285">
-                  <caret line="1102" column="0" selection-start-line="1102" selection-start-column="0" selection-end-line="1102" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#514#529#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="testMe.ipynb" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/TestHere/testMe.ipynb">
-              <provider selected="true" editor-type-id="ipnb-editor">
-                <state>
-                  <selected id="3" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="plot_cluster_iris.ipynb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Examples/plot_cluster_iris.ipynb">
-              <provider selected="true" editor-type-id="ipnb-editor">
-                <state>
-                  <selected id="2" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="kmeans.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/TestHere/kmeans.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="1092" column="26" selection-start-line="1092" selection-start-column="26" selection-end-line="1092" selection-end-column="26" />
-                  <folding>
-                    <element signature="e#514#529#0" expanded="true" />
-                    <marker date="1490642576000" expanded="true" signature="32038:32099" placeholder="import ..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="cluster.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/TestHere/cluster.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.037775446">
-                  <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-                  <folding>
-                    <element signature="e#17#27#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="kmeans.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TestHere/kmeans.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1092" column="26" selection-start-line="1092" selection-start-column="26" selection-end-line="1092" selection-end-column="26" />
+              <folding>
+                <element signature="e#514#529#0" expanded="true" />
+                <marker date="1490642576000" expanded="true" signature="32038:32099" placeholder="import ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="k_means_.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/k_means_.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-23.964285">
+              <caret line="469" column="36" selection-start-line="469" selection-start-column="36" selection-end-line="469" selection-end-column="36" />
+              <folding>
+                <element signature="e#514#529#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cluster.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TestHere/cluster.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="2.38163">
+              <caret line="122" column="17" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
+              <folding>
+                <element signature="e#17#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -121,10 +95,10 @@
         <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/spectral.py" />
         <option value="$PROJECT_DIR$/TestHere/spectral.py" />
         <option value="$PROJECT_DIR$/TestHere/validation.py" />
-        <option value="$PROJECT_DIR$/TestHere/cluster.py" />
         <option value="$PROJECT_DIR$/TestHere/kmeans.py" />
-        <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/k_means_.py" />
         <option value="$PROJECT_DIR$/TestHere/testMe.ipynb" />
+        <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/k_means_.py" />
+        <option value="$PROJECT_DIR$/TestHere/cluster.py" />
       </list>
     </option>
   </component>
@@ -134,8 +108,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -163,7 +137,34 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ALGOCOMP2">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="TestHere">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ALGOCOMP2">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -508,11 +509,17 @@
       <option name="project" value="LOCAL" />
       <updated>1490642758573</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Pushed 5k and 10k data sets (in csv)">
+      <created>1490642805803</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1490642805803</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -520,9 +527,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40379748" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.5234541" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.52363896" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14818764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="836" y="4" width="376" height="1033" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.1991404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="836" y="4" width="376" height="1033" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -559,7 +566,8 @@
     <MESSAGE value="added counters in validation and spectral" />
     <MESSAGE value="Added expected BigO/FreqCount when running Full/Lloyd&#10;Missing expected O for Elkan" />
     <MESSAGE value="Updated iPython Notebook" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated iPython Notebook" />
+    <MESSAGE value="Pushed 5k and 10k data sets (in csv)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pushed 5k and 10k data sets (in csv)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -934,7 +942,7 @@
         <state vertical-scroll-proportion="-0.7522936">
           <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
           <folding>
-            <element signature="e#206#221#0" expanded="true" />
+            <element signature="e#206#221#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -944,7 +952,7 @@
         <state vertical-scroll-proportion="0.23853211">
           <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding>
-            <element signature="e#206#221#0" expanded="true" />
+            <element signature="e#206#221#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -954,15 +962,22 @@
         <state vertical-scroll-proportion="0.20183486">
           <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
           <folding>
-            <element signature="e#226#241#0" expanded="true" />
+            <element signature="e#226#241#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestHere/testMe.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/cluster/k_means_.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.964285">
-          <caret line="1102" column="0" selection-start-line="1102" selection-start-column="0" selection-end-line="1102" selection-end-column="0" />
+        <state vertical-scroll-proportion="-23.964285">
+          <caret line="469" column="36" selection-start-line="469" selection-start-column="36" selection-end-line="469" selection-end-column="36" />
           <folding>
             <element signature="e#514#529#0" expanded="true" />
           </folding>
@@ -982,18 +997,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TestHere/cluster.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.037775446">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        <state vertical-scroll-proportion="2.38163">
+          <caret line="122" column="17" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
           <folding>
             <element signature="e#17#27#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestHere/testMe.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="3" />
         </state>
       </provider>
     </entry>

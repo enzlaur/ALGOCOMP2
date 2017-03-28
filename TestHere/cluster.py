@@ -22,11 +22,23 @@ def read_me():
     reader = csv.reader(sampleFile)
 
 
-def usewith(nclusters, algotype):
+def usewith(nclusters, algotype, dataname):
+    data100 = "smalldata.csv"
+    data5k = "shot-def-dist-5k"
+    data10k = "shot-def-dist-5k"
+    if dataname == "data100":
+        dataname = data100
+    elif dataname == "data5k":
+        dataname = data5k
+    elif dataname == "data10k":
+        dataname = data10k
+    else:
+        dataname = data100
+
     clust1 = []
     clusterpoints = []
     # acquire data from csv
-    with open('smalldata.csv') as smalldata:
+    with open(dataname) as smalldata:
         newReader = csv.reader(smalldata)
         for row in newReader:
             if row[0] !=  "\ufeffCLOSEST_DEF":
@@ -80,9 +92,11 @@ def startclustering():
     num = input()
     print("Enter full/elkan")
     algotype = input()
-    clusterpoints = usewith(int(num), str(algotype))
+    print("Choose betweek: data100, data5k, data10k")
+    dataname = input()
+    clusterpoints = usewith(int(num), str(algotype), str(dataname))
     fig, ax = plt.subplots()
-    print("len: ", len(clusterpoints))
+    print("Number of cluster points (including center): ", len(clusterpoints))
     for i in range(len(clusterpoints)):
         point = clusterpoints[i]
         x = point[0]
@@ -106,6 +120,5 @@ def testmatplot():
     plt.show()
 
 
-# Run your crap below
 # createscatter()
 startclustering()
