@@ -24,8 +24,8 @@ def read_me():
 
 def usewith(nclusters, algotype, dataname):
     data100 = "smalldata.csv"
-    data5k = "shot-def-dist-5k"
-    data10k = "shot-def-dist-5k"
+    data5k = "shot-def-dist-5k.csv"
+    data10k = "shot-def-dist-5k.csv"
     if dataname == "data100":
         dataname = data100
     elif dataname == "data5k":
