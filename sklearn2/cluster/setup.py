@@ -5,7 +5,7 @@ from os.path import join
 
 import numpy
 
-from sklearn._build_utils import get_blas_info
+from sklearn2._build_utils import get_blas_info
 
 
 def configuration(parent_package='', top_path=None):

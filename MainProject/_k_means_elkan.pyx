@@ -45,8 +45,6 @@ cdef floating euclidian_dist(floating* a, floating* b, int n_features):
     result = 0
     cdef int i
     for i in range(n_features):
-        global freq
-        freq += 1
         tmp = (a[i] - b[i])
         result += tmp * tmp
     return sqrt(result)
@@ -110,15 +108,15 @@ cdef update_labels_distances_inplace(
     cdef floating d_c, dist
     cdef int c_x, j, sample
     for sample in range(n_samples):
-        global freq
-        freq += 1
+        # global freq
+        # freq += 1
         # assign first cluster center
         c_x = 0
         x = X + sample * n_features
         d_c = euclidian_dist(x, centers, n_features)
         lower_bounds[sample, 0] = d_c
         for j in range(1, n_clusters):
-            freq += 2
+            # freq += 1
             if d_c > center_half_distances[c_x, j]:
                 c = centers + j * n_features
                 dist = euclidian_dist(x, c, n_features)
@@ -156,7 +154,6 @@ def k_means_elkan(np.ndarray[floating, ndim=2, mode='c'] X_, int n_clusters,
 
     """
     print("I HAVE BEEN CALLED")
-    addfreq()
     if floating is float:
         dtype = np.float32
     else:
@@ -193,7 +190,7 @@ def k_means_elkan(np.ndarray[floating, ndim=2, mode='c'] X_, int n_clusters,
 
     col_indices = np.arange(center_half_distances.shape[0], dtype=np.int)
     for iteration in range(max_iter):
-        addfreq()
+        # addfreq()
         if verbose:
             print("start iteration")
 
@@ -204,7 +201,7 @@ def k_means_elkan(np.ndarray[floating, ndim=2, mode='c'] X_, int n_clusters,
             print("done sorting")
 
         for point_index in range(n_samples):
-            addfreq()
+            # addfreq()
             upper_bound = upper_bounds[point_index]
             label = labels[point_index]
 

@@ -50,7 +50,12 @@ def read_me():
 def usewith(nclusters, algotype, dataname):
     data100 = "smalldata.csv"
     data5k = "shot-def-dist-5k.csv"
-    data10k = "shot-def-dist-5k.csv"
+    data10k = "shot-def-dist-10k.csv"
+
+    # if algotype == "full":
+    #     print("HAHAHA no. Reverting to elkan")
+    #     algotype = "elkan"
+
     if dataname == "data100":
         dataname = data100
     elif dataname == "data5k":

@@ -12,6 +12,11 @@ import numpy
 from sklearn._build_utils import get_blas_info
 cblas_libs, blas_info = get_blas_info()
 
+libraries = []
+if os.name == 'posix':
+  cblas_libs.append('m')
+  libraries.append('m')
+
 #
 # setup(
 #   name = 'k_means_elkan',
@@ -27,13 +32,13 @@ cblas_libs, blas_info = get_blas_info()
 # )
 
 
-# setup(
-#     name = '_k_means_elkan',
-#     ext_modules=[
-#         Extension("_k_means_elkan", ["_k_means_elkan.c"],
-#                   include_dirs=[numpy.get_include()]),
-#     ],
-# )
+setup(
+    name = '_k_means_elkan',
+    ext_modules=[
+        Extension("_k_means_elkan", ["_k_means_elkan.c"],
+                  include_dirs=[numpy.get_include()]),
+    ],
+)
 
 # setup(
 #     name = '_k_means',
@@ -42,25 +47,40 @@ cblas_libs, blas_info = get_blas_info()
 #     ]
 # )
 
-setup(
-    name= '_k_means',
-    ext_modules = cythonize(
-      [
-        Extension(
-          "_k_means", ["_k_means.c"],
-          include_dirs=[
-            join('..', 'src', 'cblas'),
-            numpy.get_include(),
-            blas_info.pop('include_dirs', [])
-          ],
-          extra_compile_args=blas_info.pop(
-            'extra_compile_args', []
-          ),
-          **blas_info
-        )
-      ]
-    )
-)
+# setup(
+#     name= '_k_means',
+#     ext_modules = cythonize(
+#       [
+#         Extension(
+#           "_k_means", ["_k_means.c"],
+#           libraries=cblas_libs,
+#           include_dirs=[
+#             numpy.get_include(),
+#             blas_info.pop('include_dirs', []),
+#           ],
+#         )
+#       ]
+#     )
+# )
+
+# setup(
+#     name= '_k_means',
+#     ext_modules = cythonize(
+#       [
+#         Extension(
+#           "_k_means", ["_k_means.c"],
+#           libraries=cblas_libs,
+#           include_dirs=[
+#             numpy.get_include(),
+#             blas_info.pop('include_dirs', []),
+#           ],
+#           extra_compile_args=blas_info.pop(
+#             'extra_compile_args', []),
+#             **blas_info
+#         )
+#       ]
+#     )
+# )
 
 # ext_modules=cythonize([
 #              Extension('*', ['project/core/lib/*.pyx']),
