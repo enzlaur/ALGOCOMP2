@@ -49,8 +49,12 @@ def read_me():
 
 def usewith(nclusters, algotype, dataname):
     data100 = "smalldata.csv"
+    data2k = "shot-def-dist-2k.csv"
     data5k = "shot-def-dist-5k.csv"
     data10k = "shot-def-dist-10k.csv"
+    missed10k = "missed-shot-def-dist-10k.csv"
+    currymissed = "curry-missed-shot.csv"
+    currymade = "curry-shot-made.csv"
 
     # if algotype == "full":
     #     print("HAHAHA no. Reverting to elkan")
@@ -58,10 +62,18 @@ def usewith(nclusters, algotype, dataname):
 
     if dataname == "data100":
         dataname = data100
+    elif dataname == "data2k":
+        dataname = data2k
     elif dataname == "data5k":
         dataname = data5k
     elif dataname == "data10k":
         dataname = data10k
+    elif dataname == "missed":
+        dataname = missed10k
+    elif dataname == "currymissed":
+        dataname = currymissed
+    elif dataname == "currymade":
+        dataname = currymade
     else:
         dataname = data100
 
@@ -131,7 +143,7 @@ def startclustering():
     num = input()
     print("Enter full/elkan")
     algotype = input()
-    print("Choose betweek: data100, data5k, data10k")
+    print("Choose betweek: data100, data5k, data10k, missed, currymade, currymissed")
     dataname = input()
     clusterpoints = usewith(int(num), str(algotype), str(dataname))
     fig, ax = plt.subplots()

@@ -32,13 +32,22 @@ if os.name == 'posix':
 # )
 
 
-setup(
-    name = '_k_means_elkan',
-    ext_modules=[
-        Extension("_k_means_elkan", ["_k_means_elkan.c"],
-                  include_dirs=[numpy.get_include()]),
-    ],
-)
+# setup(
+#     name = '_k_means_elkan',
+#     ext_modules=[
+#         Extension("_k_means_elkan", ["_k_means_elkan.c"],
+#                   include_dirs=[numpy.get_include()]),
+#     ],
+# )
+
+# setup(
+#     name = '_k_means',
+#     ext_modules= cythonize(
+#       [
+#         Extension("_k_means", ["_k_means.c"])
+#        ]
+#     )
+# )
 
 # setup(
 #     name = '_k_means',
@@ -47,21 +56,21 @@ setup(
 #     ]
 # )
 
-# setup(
-#     name= '_k_means',
-#     ext_modules = cythonize(
-#       [
-#         Extension(
-#           "_k_means", ["_k_means.c"],
-#           libraries=cblas_libs,
-#           include_dirs=[
-#             numpy.get_include(),
-#             blas_info.pop('include_dirs', []),
-#           ],
-#         )
-#       ]
-#     )
-# )
+setup(
+    name= '_k_means',
+    ext_modules = cythonize(
+      [
+        Extension(
+          "_k_means", ["_k_means.c"],
+          libraries=cblas_libs,
+          include_dirs=[
+            numpy.get_include(),
+            blas_info.pop('include_dirs', []),
+          ],
+        )
+      ]
+    )
+)
 
 # setup(
 #     name= '_k_means',
